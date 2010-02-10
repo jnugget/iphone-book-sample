@@ -28,4 +28,15 @@
   }
 }
 
+// 新規追加のところに移動できないようにするためこれが必要
+- (NSIndexPath*)tableView:(UITableView*)tableView
+  targetIndexPathForMoveFromRowAtIndexPath:(NSIndexPath*)sourceIndexPath toProposedIndexPath:(NSIndexPath*)proposedDestinationIndexPath
+{
+  if ( dataSource_.count > proposedDestinationIndexPath.row + 1 ) {
+    return proposedDestinationIndexPath;
+  } else {
+    return sourceIndexPath;
+  }
+}
+
 @end
