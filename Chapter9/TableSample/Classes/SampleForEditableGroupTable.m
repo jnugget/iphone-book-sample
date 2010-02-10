@@ -99,6 +99,16 @@
   [dataSource_ replaceObjectAtIndex:fromIndexPath.section withObject:datas];
 }
 
+- (NSIndexPath*)tableView:(UITableView*)tableView
+  targetIndexPathForMoveFromRowAtIndexPath:(NSIndexPath*)sourceIndexPath toProposedIndexPath:(NSIndexPath*)proposedDestinationIndexPath
+{
+  if ( 1 == proposedDestinationIndexPath.section ) {
+    return proposedDestinationIndexPath;
+  } else {
+    return sourceIndexPath;
+  }
+}
+
 - (void)tableView:(UITableView*)tableView willBeginEditingRowAtIndexPath:(NSIndexPath*)indexPath {
 }
 
