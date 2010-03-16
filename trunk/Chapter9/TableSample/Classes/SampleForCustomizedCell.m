@@ -141,21 +141,11 @@
   self.sections = [NSArray arrayWithObjects:@"名前", @"必殺技", @"強さ", nil];
   NSArray* rows1 = [[NSArray alloc] initWithObjects:@"宮本武蔵", nil];
   NSArray* rows2 = [[NSArray alloc] initWithObjects:@"二刀流", nil ];
-  NSArray* rows3 = [[NSArray alloc] initWithObjects:
-                                             @"攻撃力", @"防御力",
-                                             @"etc1", @"etc2",
-                                             @"etc3", @"etc4",
-                                             @"etc5", @"etc6", 
-                                             @"etc7", @"etc8",
-                                             @"etc9", @"etc10", nil];
+  NSArray* rows3 = [[NSArray alloc] initWithObjects:@"攻撃力", @"防御力", nil];
   self.dataSource = [NSArray arrayWithObjects: rows1, rows2, rows3, nil];
-  self.sliderValues = [NSMutableArray arrayWithObjects:
-                                             [NSNumber numberWithFloat:0.9], [NSNumber numberWithFloat:0.8],
-                                             [NSNumber numberWithFloat:0.1], [NSNumber numberWithFloat:0.2],
-                                             [NSNumber numberWithFloat:0.3], [NSNumber numberWithFloat:0.4],
-                                             [NSNumber numberWithFloat:0.5], [NSNumber numberWithFloat:0.6],
-                                             [NSNumber numberWithFloat:0.7], [NSNumber numberWithFloat:0.8],
-                                             [NSNumber numberWithFloat:0.9], [NSNumber numberWithFloat:1.0], nil];
+  self.sliderValues = [NSMutableArray arrayWithObjects:[NSNumber numberWithFloat:0.9],
+					                                   [NSNumber numberWithFloat:0.8],
+					                                   nil];
   [rows1 release];
   [rows2 release];
   [rows3 release];
